@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+   
+    <script>
+        const Choices = ['r', 'p', 's'];
+
+    alert("Welcome to the classic game ROCK, PAPER, SCISSORS! Press the OK button to begin.");
+
+    for (let i = 0; i <= 5; i++) {
+        let computerChoice = Choices[Math.floor(Math.random() * Choices.length)];
+
+        let humanChoice = prompt('Please make a selection:  r for rock,  s for scissors,  p for paper');
+        humanChoice = humanChoice.toLowerCase();
+
+    if ((humanChoice === 'r') || (humanChoice === 'p') || (humanChoice === 's')) {
+
+        alert(`You picked ${humanChoice}, the computer picked ${computerChoice}`);
+//Jeff, I feel like there is a way to combine what is below, but it would take more time
+        if (humanChoice === computerChoice) {
+            alert(`It's a tie. Press OK to play again or exit the browser tab to quit.`);
+        } else if (humanChoice === "r" && computerChoice === "s") {
+            alert(`You win! Press OK to play again or exit the browser tab to quit.`);
+        } else if (humanChoice === "s" && computerChoice === "p") {
+            alert(`You win! Press OK to play again or exit the browser tab to quit.`);
+        } else if (humanChoice === "p" && computerChoice === "r") {
+            alert(`You win! Press OK to play again or exit the browser tab to quit.`);
+        }
+        else {
+            alert(`You lost! Press OK to play again or exit the browser tab to quit.`);
+            }
+        }
+    }
+    </script>
+
+</head>
+<body>
+</body>
+</html>
